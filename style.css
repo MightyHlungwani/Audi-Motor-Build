@@ -1,0 +1,404 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+    min-height: 100vh;
+}
+
+header {
+    background: linear-gradient(90deg, #000000, #434343);
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    color: #ff3333;
+    margin-bottom: 15px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+}
+
+nav a:hover {
+    color: #ff3333;
+}
+
+main {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 25px;
+    background: linear-gradient(135deg, #1c1c1c, #343a40);
+    border-radius: 12px;
+}
+
+h2 {
+    color: #ff3333;
+    margin-bottom: 15px;
+}
+
+p {
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+section {
+    margin-bottom: 25px;
+}
+
+.service-card {
+    background: linear-gradient(135deg, #434343, #000000);
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 10px;
+    border: 1px solid #555;
+}
+
+button {
+    background: linear-gradient(90deg, #ff3333, #b30000);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #b30000, #ff3333);
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 15px;
+    border: 1px solid #777;
+    border-radius: 6px;
+    background: #f5f5f5;
+    color: #222;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+footer {
+    background: linear-gradient(90deg, #000000, #434343);
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+@media (max-width: 600px) {
+    main {
+        margin: 15px;
+        padding: 18px;
+    }
+
+    nav {
+        gap: 8px;
+    }
+
+    nav a {
+        padding: 7px;
+    }
+}
+    
+/* Hovering card effect */
+main {
+    background: linear-gradient(135deg, #1c1c1c, #343a40);
+    padding: 25px;
+    border-radius: 12px;
+    margin: 30px auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+main:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Hover effect for service cards */
+.service-card {
+    background: linear-gradient(135deg, #434343, #000000);
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(255, 51, 51, 0.25);
+}
+
+/* Smooth link hover */
+main a {
+    color: #ff3333;
+    transition: color 0.3s ease;
+}
+
+main a:hover {
+    color: white;
+}
+
+
+/* Interactive sections */
+.interactive-section {
+    margin: 30px 0;
+    padding: 22px;
+    background: linear-gradient(135deg, #202020, #343a40);
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.interactive-section:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 22px rgba(255, 51, 51, 0.2);
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.tab-button {
+    background: #333;
+    border: 1px solid #ff3333;
+}
+
+.tab-button.active {
+    background: #ff3333;
+}
+
+.tab-content {
+    display: none;
+    padding: 15px;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Accordion */
+.accordion {
+    width: 100%;
+    text-align: left;
+    margin: 5px 0;
+    background: linear-gradient(90deg, #333, #111);
+}
+
+.accordion-panel {
+    display: none;
+    padding: 15px;
+    background: #292929;
+    border-radius: 6px;
+}
+
+.accordion-panel.open {
+    display: block;
+}
+
+/* Image gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+}
+
+.gallery-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-image:hover {
+    transform: scale(1.04);
+    box-shadow: 0 8px 18px rgba(255, 51, 51, 0.35);
+}
+
+/* Lightbox */
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+
+.lightbox.open {
+    display: flex;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.close-lightbox {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 32px;
+}
+
+/* Interactive map */
+#map {
+    height: 350px;
+    width: 100%;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+@media (max-width: 600px) {
+    .interactive-section {
+        padding: 15px;
+    }
+
+    .gallery-image {
+        height: 150px;
+    }
+
+    #map {
+        height: 280px;
+    }
+}
+
+/*
+ Audi-style logo
+ */
+  .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 45px;
+
+        filter:
+            drop-shadow(0 0 8px rgba(255,255,255,0.25))
+            drop-shadow(0 15px 25px rgba(0,0,0,0.8));
+
+        transition: transform 0.5s ease;
+    }
+
+    .logo:hover {
+        transform: scale(1.08);
+    }
+
+    .ring {
+        width: 105px;
+        height: 105px;
+        border: 7px solid #d9d9d9;
+        border-radius: 50%;
+        margin-left: -20px;
+
+        box-shadow:
+            inset 0 0 8px rgba(255,255,255,0.4),
+            0 0 5px rgba(255,255,255,0.25);
+    }
+
+    .ring:first-child {
+        margin-left: 0;
+    }
+
+/* Audi Hero Banner */
+.hero {
+    min-height: 550px;
+    background:
+        linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),
+        url("../images/audi-banner.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    padding: 50px;
+}
+
+.hero-content h1 {
+    font-size: 90px;
+    color: white;
+    animation: slideIn 1.5s ease;
+}
+
+.hero-content p {
+    font-size: 22px;
+    color: white;
+}
+
+.hero-button {
+    display: inline-block;
+    background: #ff3333;
+    color: white;
+    text-decoration: none;
+    padding: 14px 25px;
+    border-radius: 5px;
+    transition: 0.4s ease;
+}
+
+.hero-button:hover {
+    background: #b30000;
+    transform: translateY(-5px);
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 600px) {
+    .hero {
+        min-height: 350px;
+        padding: 25px;
+    }
+
+    .hero-content h1 {
+        font-size: 50px;
+    }
+}
+.hero .logo {
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+.hero .ring {
+    width: 65px;
+    height: 65px;
+    border-width: 5px;
+
+}
