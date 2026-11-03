@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Explore Audi vehicle information, servicing, maintenance, engine diagnostics and automotive parts with Audi Motor Build.">
+<meta name="keywords" content="Audi, Audi vehicles, car servicing, vehicle maintenance, engine diagnostics, automotive parts">
+<meta name="author" content="Audi Motor Build">
+<meta name="robots" content="index, follow">
+<title>Home | Audi Motor Build</title>
+
+    <title>Audi Motor Build - Services</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+<header>
+    <h1>Audi Motor Build</h1>
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+        <a href="enquire.html">Enquire</a>
+        <a href="enquiries.html">View Enquiries</a>
+    </nav>
+</header>
+
+<main>
+    <h2>Our Services</h2>
+    <p>Explore our automotive service and maintenance information.</p>
+
+    <div class="service-filters">
+        <button type="button" data-filter="all">All</button>
+        <button type="button" data-filter="maintenance">Maintenance</button>
+        <button type="button" data-filter="diagnostics">Diagnostics</button>
+        <button type="button" data-filter="brakes">Brakes</button>
+    </div>
+
+    
+<div class="service-card" data-category="maintenance">
+    <h2>Car Servicing</h2>
+    <p>Regular servicing to keep your Audi running smoothly.</p>
+    <button onclick="enquireService('Car Servicing')">
+        Enquire Now
+    </button>
+</div>
+
+<div class="service-card" data-category="diagnostics">
+    <h2>Engine Diagnostics</h2>
+    <p>Identify and diagnose engine problems.</p>
+    <button onclick="enquireService('Engine Diagnostics')">
+        Enquire Now
+    </button>
+</div>
+
+<div class="service-card" data-category="brakes">
+    <h2>Brake Services</h2>
+    <p>Brake inspections and repair services.</p>
+    <button onclick="enquireService('Brake Services')">
+        Enquire Now
+    </button>
+</div>
+
+<div class="service-card" data-category="maintenance">
+    <h2>Car Maintenance</h2>
+    <p>Maintenance to help keep your vehicle in good condition.</p>
+    <button onclick="enquireService('Car Maintenance')">
+        Enquire Now
+    </button>
+</div>
+
+
+    <section id="booking" class="booking-section">
+        <h2>Service Enquiry</h2>
+
+        <form id="bookingForm">
+            <label for="customerName">Full Name:</label>
+            <input type="text" id="customerName" required>
+
+            <label for="customerEmail">Email:</label>
+            <input type="email" id="customerEmail" required>
+
+            <label for="serviceType">Select Service:</label>
+            <select id="serviceType" required>
+                <option value="">Choose a service</option>
+                <option>Car Servicing</option>
+                <option>Engine Diagnostics</option>
+                <option>Brake Maintenance</option>
+                <option>General Maintenance</option>
+            </select>
+
+            <label for="serviceDate">Preferred Date:</label>
+            <input type="date" id="serviceDate" required>
+
+            <label for="customerMessage">Message:</label>
+            <textarea id="customerMessage" rows="4"></textarea>
+
+            <button type="submit">Submit Enquiry</button>
+            <p id="formMessage" role="status"></p>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2026 Audi Motor Build</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Explore Audi vehicle information, servicing, maintenance, engine diagnostics and automotive parts with Audi Motor Build.">
+<meta name="keywords" content="Audi, Audi vehicles, car servicing, vehicle maintenance, engine diagnostics, automotive parts">
+<meta name="author" content="Audi Motor Build">
+<meta name="robots" content="index, follow">
+<title>Home | Audi Motor Build</title>
+
+    <title>Customer Enquiries</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+<header>
+    <h1>Audi Motor Build</h1>
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+        <a href="enquire.html">Enquire</a>
+        <a href="enquiries.html">View Enquiries</a>
+    </nav>
+</header>
+
+<main>
+    <h2>Customer Enquiry Form</h2>
+
+    <form id="enquiryForm">
+        <label for="customerName">Full Name:</label>
+        <input type="text" id="customerName" required>
+
+        <label for="customerEmail">Email Address:</label>
+        <input type="email" id="customerEmail" required>
+
+        <label for="customerPhone">Phone Number:</label>
+        <input type="tel" id="customerPhone" required>
+
+        <label for="enquiryType">Select Service:</label>
+<select id="enquiryType" required>
+    <option value="">Select a service</option>
+    <option value="Car Servicing">Car Servicing</option>
+    <option value="Engine Diagnostics">Engine Diagnostics</option>
+    <option value="Brake Services">Brake Services</option>
+    <option value="Car Maintenance">Car Maintenance</option>
+    <option value="Parts">Car Parts</option>
+    <option value="Other">Other</option>
+</select>
+
+        <label for="customerMessage">Your Message:</label>
+        <textarea id="customerMessage" rows="5" required></textarea>
+
+        <button type="submit">Submit Enquiry</button>
+    </form>
+
+    <p id="enquiryMessage"></p>
+</main>
+
+
+
+
+
+<main>
+    <h2>Customer Enquiries</h2>
+    <div id="enquiryList"></div>
+</main>
+
+<footer>
+    <p>&copy; 2026 Audi Motor Build</p>
+</footer>
+
+</body>
+</html>
